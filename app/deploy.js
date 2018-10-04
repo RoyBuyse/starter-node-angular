@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'cp -r starter-node-angular-temp/* hackathon-starter/ && rm -rf starter-node-angular-temp', {
+    'cp -r starter-node-angular-temp/* starter-node-angular/ && rm -rf starter-node-angular-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -85,7 +85,7 @@ function sshConnect() {
   ssh
     .connect({
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-      host: '00.00.00.00',
+      host: '13.59.111.215',
       username: 'ubuntu',
       privateKey: 'hs-key.pem'
     })
